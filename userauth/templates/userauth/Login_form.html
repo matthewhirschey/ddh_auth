@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Login</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'userauth/style.css' %}">
+    </head>
+    <body>
+        <div class="login_div">
+            <div>
+                Data Driven Hypothesis
+            </div>
+            <br>
+            <form method="POST">
+                {% csrf_token %}
+                <div>
+                    <label for="{{ form.username.id_for_label }}">Username: </label>{{ form.username }}
+                </div>
+                <br>
+                <div>
+                    <label for="{{ form.password.id_for_label }}">Password: </label>{{ form.password }}
+                </div>
+                <br>
+                <input type="submit" name="sumbit">
+            </form>
+        </div>
+    </body>
+</html>
