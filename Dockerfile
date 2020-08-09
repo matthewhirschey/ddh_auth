@@ -14,6 +14,6 @@ RUN pip install -r requirements.txt
 COPY . .
 
 # Collect static files.
-RUN DJANGO_ALLOWED_HOSTS='localhost' SECRET_KEY=DUMMY python manage.py collectstatic --noinput
+RUN mkdir static && DJANGO_ALLOWED_HOSTS='localhost' SECRET_KEY=DUMMY python manage.py collectstatic --noinput
 
 CMD ./run.sh
