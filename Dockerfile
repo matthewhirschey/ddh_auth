@@ -13,4 +13,7 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-CMD python manage.py runserver
+# Collect static files.
+RUN D4S2_SECRET_KEY=DUMMY python manage.py collectstatic --noinput
+
+CMD ./run.sh
