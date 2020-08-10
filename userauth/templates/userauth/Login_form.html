@@ -10,7 +10,7 @@
                 Data Driven Hypothesis
             </div>
             <br>
-            <form method="POST">
+            <form action="/login/" method="POST">
                 {% csrf_token %}
                 <div>
                     <label for="{{ form.username.id_for_label }}">Username: </label>{{ form.username }}
@@ -20,7 +20,7 @@
                     <label for="{{ form.password.id_for_label }}">Password: </label>{{ form.password }}
                 </div>
                 <br>
-                <input type="submit" name="sumbit">
+                <input type="submit" name="submit">
             </form>
         </div>
     </body>
