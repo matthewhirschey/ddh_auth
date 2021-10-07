@@ -5,9 +5,12 @@
         <link rel="stylesheet" type="text/css" href="{% static 'userauth/style.css' %}">
     </head>
     <body>
+        <center>
+        <img src ="{% static 'userauth/ddh_logo.png' %}" width = "50%">
+        </center>
         <div class="login_div">
             <div>
-                Data Driven Hypothesis
+                
             </div>
             <br>
             <form action="/login/" method="POST">
@@ -22,6 +25,9 @@
                 <br>
                 <input type="submit" name="submit">
             </form>
+            <br>
+            <div>If you are not yet subscribed, sign up for an <a href = "https://buy.stripe.com/dR6dS696E6Do4TeaEH">academic</a> or <a href = "https://buy.stripe.com/5kAdS62Ig0f099ubIJ">commercial</a> license.
+            </div>
         </div>
     </body>
 </html>
