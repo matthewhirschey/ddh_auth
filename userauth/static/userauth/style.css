@@ -9,3 +9,11 @@
 a{
   color: #00919f;
 }
+
+.password_reset_complete_div {
+    text-align: center;
+}
+
+.password_reset_confirm_div {
+    text-align: center;
+}
