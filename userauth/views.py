@@ -104,9 +104,13 @@ def make_reset_password_url(request, user):
 
 
 def send_new_user_email(user, reset_password_url):
-    subject = "Data Driven Hypothesis - User Setup"
+    subject = "Welcome to Data-Driven Hypothesis"
     message = """
-        Click the following link: {}
+        To get started, click to set a password for your account: {}
+        
+        If you have any problems, reply to this email for support.
+        
+        We're eager to see what you can discover!
     """.format(reset_password_url)
     send_mail(
         subject,
